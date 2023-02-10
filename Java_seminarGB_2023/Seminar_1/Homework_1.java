@@ -6,6 +6,7 @@ public class Homework_1 {
     public static void main(String[] args) {
     int myDigit = inputNumber();
     System.out.println("Треугольное число: " + printResult(triangleDigit(myDigit)));
+    System.out.println("Рекурсивное число: " + recur(myDigit));
     }
     
 // Ввод  n размера треугольного числа
@@ -27,6 +28,15 @@ public static int triangleDigit(int number) {
 // Печать результата
 public static int printResult(int digit) {
     return digit;
+}
+
+//    2-ой способ(рекурсивный метод)
+
+public static int recur (int numb) {
+    if (numb == 1) {
+        return 1;
+    }
+    return recur(numb-1) + numb;
 }
 
 }
