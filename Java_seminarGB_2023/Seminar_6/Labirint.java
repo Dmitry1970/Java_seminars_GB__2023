@@ -38,7 +38,7 @@ public class Labirint {
         for (int i = 0; i < myArray.length; i++) {
             for (int j = 0; j < myArray[i].length; j++) {
                 if (i == 0 || i == myArray.length - 1 || j == 0 || j == myArray[i].length - 1) {
-                    myArray[i][j] = -1;  // стенка
+                    myArray[i][j] = -1; // стенка
                 }
                 if (i == myArray.length - 3 && j == myArray[i].length - 1) {
                     myArray[i][j] = 8; // выход
@@ -50,5 +50,19 @@ public class Labirint {
             System.out.println();
         }
         return myArray;
+    }
+
+    public static int[][] wallCreator() {
+        int[][] myArr = {
+                { -1, -1, -1, -1, -1, -1, -1, -1, -1 },
+                { -1, 2, 0, 0, 0, -1, 0, 0, -1 },
+                { -1, 0, -1, 0, 0, 0, 0, 0, -1 },
+                { -1, 0, -1, 0, -1, 0, -1, 0, -1 },
+                { -1, 0, -1, -1, -1, 0, -1, 0, -1 },
+                { -1, 0, 0, 0, 0, 0, -1, 0, 8 },
+                { -1, -1, -1, -1, -1, -1, -1, -1, -1 }
+        };
+
+        return myArr;
     }
 }
